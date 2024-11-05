@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 
-const LoginPage = ({ navigation }) => {
+const PasswordRecoveryPage = () => {
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
+      <Text style={styles.title}>Recover Password</Text>
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -15,21 +14,8 @@ const LoginPage = ({ navigation }) => {
         value={email}
         onChangeText={setEmail}
       />
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        secureTextEntry={true}
-        value={password}
-        onChangeText={setPassword}
-      />
       <TouchableOpacity style={styles.button} onPress={() => {}}>
-        <Text style={styles.buttonText}>Login</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => {}} style={styles.linkContainer}>
-        <Text style={styles.linkText}>Forgot Password?</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => navigation.navigate('Register')}>
-        <Text style={styles.linkText}>Don't have an account? Register</Text>
+        <Text style={styles.buttonText}>Send Recovery Email</Text>
       </TouchableOpacity>
     </View>
   );
@@ -54,7 +40,7 @@ const styles = StyleSheet.create({
     borderColor: '#ccc',
     borderWidth: 1,
     borderRadius: 8,
-    marginBottom: 15,
+    marginBottom: 20,
     paddingHorizontal: 15,
     backgroundColor: '#fff',
     fontSize: 16,
@@ -71,15 +57,6 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
   },
-  linkText: {
-    color: '#007BFF',
-    textAlign: 'center',
-    marginTop: 16,
-    fontSize: 16,
-  },
-  linkContainer: {
-    marginVertical: 8,
-  },
 });
 
-export default LoginPage;
+export default PasswordRecoveryPage;

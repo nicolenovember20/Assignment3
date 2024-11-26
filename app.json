@@ -1,16 +1,17 @@
 {
   "expo": {
-    "name": "Assignment3",
-    "slug": "Assignment3",
+    "name": "assignment4",
+    "slug": "assignment4",
     "version": "1.0.0",
+    "main": "expo-router/entry",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
